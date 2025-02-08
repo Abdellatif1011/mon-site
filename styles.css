@@ -1,0 +1,506 @@
+/* Réinitialisation des styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Arial", sans-serif;
+}
+
+body {
+    background-image: url('https://www.maroc24.com/fr/wp-content/uploads/2023/08/La-Faculte-des-Sciences-Semlalia-de-Marrakech-850x560.jpg'); 
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    overflow: hidden;/*page no scroll */
+}
+
+/* --- Marquee (Défilement) --- */
+.marquee-container {
+    width: 100%;
+    overflow: hidden;
+    background-color: #ffffff;
+    padding: 10px 0;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.marquee-wrapper {
+    display: flex;
+    width: 200%;
+    animation: marquee 15s linear infinite;
+}
+
+.marquee-content {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex: 1;
+}
+
+@keyframes marquee {
+    from {
+        transform: translateX(0%);
+    }
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+.marquee-content img {
+    height: 40px;
+    vertical-align: middle;
+}
+
+.marquee-content span {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+}
+
+.nom-fssm { color: #007bff; }
+.nom-uca { color: #28a745; }
+.nom-Pw { color: #ff5722; }
+
+/* --- Conteneur principal --- */
+.container {
+    max-width: 400px;
+    margin: 25px auto 0;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* --- Animation d'entrée --- */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* --- Titre et sous-titre --- */
+.banner h1 {
+    color: #007bff;
+    font-size: 28px;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.text {
+    font-size: 16px;
+    color: #555;
+    font-weight: bold;
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.text i {
+    background-color: #007bff;
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    border-radius: 50%;
+}
+
+/* --- Champs d'entrée --- */
+.input-group {
+    margin-bottom: 20px;
+    text-align: left;
+    animation: slideIn 1s ease-in-out;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.input-group label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 8px;
+    color: #006699;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    background-color: #f8f9fa;
+    transition: all 0.3s ease;
+}
+
+.input-group input:focus {
+    border-color: #007bff;
+    box-shadow: 0px 0px 10px rgba(0, 123, 255, 0.2);
+    outline: none;
+}
+
+/* --- Bouton Valider --- */
+.button {
+    width: 100%;
+}
+
+/* --- Lien mot de passe oublié --- */
+.oublie {
+    margin: 15px 0;
+}
+
+.oublie a {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+.oublie a:hover {
+    color: #0056b3;
+    text-decoration: underline;
+}
+
+/* --- Bouton Valider --- */
+.button {
+    width: 100%;
+    padding: 14px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+/* --- Effet au survol du bouton --- */
+.button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+/* --- Pied de page --- */
+footer {
+    z-index: 12;
+    text-align: center;
+    padding: 10px;
+    background: #f1f1f1;
+    margin-top: 30px;
+    font-size: 14px;
+    animation: fadeIn 2s ease-in-out;
+}
+
+footer a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: #0056b3;
+    text-decoration: underline;
+}
+/* page d'inscription */
+/* --- Conteneur principal --- */
+.welcome-text {
+    margin: 20px 0;
+    animation: slideInFromBottom 1s ease-out;
+}
+
+
+
+.container:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.form {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 500px;
+}
+
+.form label {
+    display: block;
+    margin: 10px 0 5px;
+    font-weight: bold;
+}
+
+.form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.form .row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.form .row label {
+    width: 48%;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-between;
+}
+
+.btn-resultat, .btn-annuler {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn-resultat {
+    background-color: #28a745;
+    color: white;
+}
+
+.btn-annuler {
+    background-color: #dc3545;
+    color: white;
+}
+@keyframes slideInFromBottom {
+    from { transform: translateY(50px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+
+ body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background: linear-gradient(45deg, #003366, #006699);
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+
+footer {
+    background-color: #003366;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+footer a {
+    color: #fff;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+:root {
+    --primary-color: #007bff;  /* Couleur principale */
+    --danger-color: #dc3545;  /* Couleur d'alerte */
+    --light-blue: #e3f2fd;  /* Fond léger */
+    --border-color: #dee2e6;  /* Couleur de la bordure */
+    --hover-color: #d4e9fc;  /* Couleur au survol */
+    --background-color: #f8f9fa; /* Couleur de fond de page */
+    --font-color: #2c3e50; /* Couleur du texte principal */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--background-color);
+    font-size: 1rem;
+}
+
+.container {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 1rem;
+    flex-grow: 1;
+}
+
+.result-card {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    animation: slideIn 0.5s ease-out;
+}
+
+/* .banner {
+    background: var(--primary-color);
+    color: white;
+    padding: 2rem;
+    text-align: center;
+    position: relative;
+} */
+
+/* .banner::after {
+    content: '';
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-top: 20px solid var(--primary-color);
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+} */
+
+.content {
+    padding: 2rem;
+    text-align: center;
+}
+
+.student-name {
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+    color: var(--font-color);
+    font-weight: 600;
+    animation: fadeIn 0.5s ease-out 0.3s both;
+}
+
+.result-box {
+    background: var(--light-blue);
+    padding: 1.5rem;
+    margin: 1rem 0;
+    border-radius: 5px;
+    animation: fadeIn 0.5s ease-out 0.6s both;
+}
+
+.result-value {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+.admission-status {
+    color: var(--danger-color);
+    font-size: 1.4rem;
+    margin: 2rem 0;
+    font-weight: bold;
+    animation: fadeIn 0.5s ease-out 0.9s both;
+}
+
+.footer {
+    background: var(--background-color);
+    border-top: 1px solid var(--border-color);
+    padding: 1rem;
+    text-align: center;
+    color: #6c757d;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Animation du logo */
+.logo {
+    width: 200px;
+    height: 80px;
+    margin-bottom: 1rem;
+    animation: rotate 20s linear infinite;
+}
+
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .container {
+        margin: 1rem auto;
+    }
+
+    .banner {
+        padding: 1.5rem;
+    }
+
+    .student-name {
+        font-size: 1.5rem;
+    }
+
+    .result-value {
+        font-size: 1.8rem;
+    }
+
+    .admission-status {
+        font-size: 1.2rem;
+    }
+    body {
+        overflow: scroll;
+    }
+}
+
+/* Hover Effects */
+.result-card:hover {
+    transform: translateY(-5px);
+    transition: transform 0.3s ease;
+}
+
+.result-box:hover {
+    background: var(--hover-color);
+    transition: background-color 0.3s ease;
+}
+button a {
+    color: #fff;
+    text-decoration: none;
+}
