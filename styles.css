@@ -227,6 +227,8 @@ footer a:hover {
     transform: translateY(-5px);
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
 }
+
+/* --- Formulaire d'inscription --- */
 main {
     display: flex;
     justify-content: center;
@@ -289,6 +291,10 @@ main {
     background-color: #dc3545;
     color: white;
 }
+
+
+
+
 @keyframes slideInFromBottom {
     from { transform: translateY(50px); opacity: 0; }
     to { transform: translateY(0); opacity: 1; }
@@ -322,6 +328,11 @@ footer {
     color: white;
     padding: 10px;
     text-align: center;
+    /* pstion button de page  */
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
 }
 
 footer a {
@@ -504,3 +515,20 @@ button a {
     color: #fff;
     text-decoration: none;
 }
+/* style for conteian shadow */
+
+
+
+
+/* style de responsevite */
+/* .result-box {
+    background-color: #f0f0f0;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+} */
+

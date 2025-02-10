@@ -1,0 +1,93 @@
+<?php
+    // if (!isset($_POST['username']) || !isset($_POST['password'])) {
+    //     header('Location: index.php');
+    //     exit();
+    // } else {
+    //     $username = $_POST['username'];
+    //     $password = $_POST['password'];
+    //     if ($username == 'etudiant' && $password == '1234') {
+    //     } else {
+    //         header('Location: index.php');
+    //         exit();
+    //     }
+    // }
+?>
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="https://pemaster-fssm.uca.ma/assets/media/logos/logoFssm.png" type="image/x-icon">
+    <link rel="stylesheet" href="styles.css">
+    <title>Page de l'Étudiant</title>
+</head>
+<body>
+    <header>
+        <div class="marquee-container">
+            <div class="marquee-wrapper">
+                <div class="marquee-content">
+                    <img src="https://pemaster-fssm.uca.ma/assets/media/logos/logoFssm.png" alt="Logo FSSM" style="vertical-align: middle; height: 50px; margin-right: 15px;">
+                    <span class="nom-fssm">Faculté des Sciences Semlalia de Marrakech</span>
+                    <span class="nom-uca">Université Cadi Ayyad</span>
+                    <span class="nom-Pw">Programmation Web</span>
+                </div>
+                <div class="marquee-content"> 
+                    <img src="https://pemaster-fssm.uca.ma/assets/media/logos/logoFssm.png" alt="Logo FSSM" style="vertical-align: middle; height: 50px; margin-right: 15px;">
+                    <span class="nom-fssm">Faculté des Sciences Semlalia de Marrakech</span>
+                    <span class="nom-uca">Université Cadi Ayyad</span>
+                    <span class="nom-Pw">Programmation Web</span>
+                </div>
+            </div>
+        </div>
+        <div class="welcome-text">
+            <h1>Bienvenue sur la page de l'étudiant</h1>
+            <p id="current-date"></p>
+        </div>
+    </header>
+    <section>
+        <main>
+            <form class="form" action="resultat.php" method="post">
+                <div class="row">
+                    <label for="etudiant">Étudiant :</label>
+                    <input type="text" id="etudiant" name="etudiant" required placeholder="Nom de l'étudiant">
+                </div>
+                <div class="row">
+                    <label for="maths">Maths :</label>
+                    <input type="number" id="maths" name="maths" required min="0" max="20" placeholder="Note sur 20">
+                </div>
+                <div class="row">
+                    <label for="informatique">Informatique :</label>
+                    <input type="number" id="informatique" name="informatique" required min="0" max="20" placeholder="Note sur 20">
+                </div>
+                <div class="buttons">
+                    <button type="submit" class="btn-resultat">Résultat</button>
+                    <button type="reset" class="btn-annuler">Annuler</button>
+                </div>
+            </form>
+        </main>
+    </section>
+    <footer>
+        <p>&copy; 2024 Faculté des Sciences Semlalia de Marrakech. Tous droits réservés.</p>
+        <p>Contact: <a href="mailto:contact@fssm.uca.ma">contact@fssm.uca.ma</a></p>
+    </footer>
+
+    <script>
+
+        // Display the current date
+        document.getElementById('current-date').textContent = new Date().toLocaleDateString('fr-FR', {
+            weekday: 'long', year: 'numeric', month: 'long', day: 'numeric'
+        });
+
+        /*document.querySelector('form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const etudiant = document.getElementById('etudiant').value;
+            const maths = parseFloat(document.getElementById('maths').value);
+            const informatique = parseFloat(document.getElementById('informatique').value);
+            const moyenne = (maths + informatique) / 2;
+            alert(`Résultat pour ${etudiant}:\nMoyenne: ${moyenne.toFixed(2)}/20`);
+        });*/
+
+      
+    </script>
+</body>
+</html>
